@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="landing.css" />
+    <link
+      rel="icon"
+      href="assets/logo.svg"
+      type="image/svg+xml"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/xhi7ymo.css" />
+    <title>Forside</title>
+  </head>
+  <body>
+    <div id="blur"></div>
+    <div class="wrap">
+      <div class="wrap2">
+        <header>
+          <div class="grid_menu">
+            <div id="mySidepanel" class="sidepanel">
+              <section id="åbenmenu_knap">
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                >
+                  <img src="assets/menuluk.svg" alt="" />
+                </a>
+              </section>
+              <a href="Forestillinger.html">FORESTILLINGER</a>
+              <a href="Købbilletter.html">KØB BILLETTER</a>
+              <a href="Købårskort.html">KØB ÅRSKORT</a>
+              <a href="Købgavekort.html">KØB GAVEKORT</a>
+              <a href="Dinprofil.html">DIN PROFIL</a>
+              <a href="Billetkurv.html">BILLETKURV</a>
+            </div>
+            <section id="lukmenu_knap">
+              <button class="openbtn" onclick="openNav()">
+                <img src="assets/menuaben.svg" alt="menu_knap" />
+              </button>
+            </section>
+          </div>
+        </header>
+
+        <section id="first_section">
+          <h2 id="GR">GR</h2>
+          <h2 id="OB">OB</h2>
+          <h2 id="GROB">GROB</h2>
+          <h2 id="teater">teater</h2>
+          <h2 id="grobteater">GROB Teater</h2>
+          <h2 id="dtf">drink, think and feel</h2>
+          <div id="billet">
+            <h2>Denisova</h2>
+            <p>30. marts - 31. april</p>
+            <button></button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <main>
+      <section id="kampagne">
+        <h3>Drink, think and feel hos Grob</h3>
+        <p>
+          Covid-19 er endelig et overstået kapitel og vi har i denne sammenhæng
+          lavet kampagnen <i>drink, think and feel</i>, der hylder
+          spontaniteten, god underholdning og måske en lille promille. Hos Grob
+          behøver det, hverken være prætentiøst eller udelukkende for eliten at
+          gå i teateret. En god fredag aften kan altid starte eller slutte hos
+          os.
+        </p>
+        <button onclick="window.location.href='doku.html'">Se mere</button>
+      </section>
+      <section id="spin">
+        <h3>Spin the wheel</h3>
+        <h4>Optjen point til din profil og få en unik teateroplevelse</h4>
+        <div class="hjul">
+          <img src="assets/hjul.svg" alt="" id="hjul" />
+          <img src="assets/pil.svg" alt="" id="pil" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <form>
+        <label>Nyhedsbrev</label>
+        <input placeholder="  Email" type="email" id="email" name="email" />
+        <input id="submit" type="submit" value="Tilmeld" />
+      </form>
+      <address>
+        <p>Adresse: Nørrebrogade 38, 2200 København</p>
+        <p>Telefon: 35 30 05 00</p>
+      </address>
+      <div id="links">
+        <img src="assets/twitter.svg" alt="Twitter" />
+        <img src="assets/facebook.svg" alt="facebook" />
+        <img src="assets/instagram.svg" alt="instagram" />
+        <img src="assets/youtube.svg" alt="youtube" />
+      </div>
+    </footer>
+
+    <script src="style.js"></script>
+    <script src="hjul.js"></script>
+  </body>
+</html>

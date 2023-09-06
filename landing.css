@@ -1,0 +1,728 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+/* header/nav */
+
+.grid_menu {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+header {
+  background: transparent;
+  position: sticky;
+  top: 0;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f9b233;
+}
+
+#lukmenu_knap {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+#lukmenu_knap img {
+  width: 55%;
+}
+
+#åbenmenu_knap {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+#åbenmenu_knap img {
+  width: 55%;
+}
+
+.sidepanel {
+  height: 925px;
+  position: fixed;
+  z-index: 1;
+  background-color: #0048ae;
+  overflow-x: hidden;
+  padding-top: 160px;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  width: 0;
+}
+
+.sidepanel a {
+  margin: 0px 0px 50px 30px;
+  text-decoration: none;
+  color: #f9b233;
+  letter-spacing: 1.5px;
+  display: block;
+  transition: 0.3s;
+  font-family: "Druk Wide";
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+}
+
+.sidepanel a:hover {
+  color: #e637a7;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 30px;
+}
+
+.openbtn {
+  cursor: pointer;
+  place-self: start start;
+  margin: 30px 30px 30px 10px;
+  border: none;
+  background: transparent;
+}
+
+/* #nav_desktop {
+  display: none;
+} */
+
+/* main mobile */
+
+#first_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 150px 1fr 1fr;
+}
+
+.blaamand {
+  grid-column: 1/4;
+  grid-row: 1/8;
+  overflow: hidden;
+}
+
+.wrap {
+  background-image: url(assets/blaamandmobile.svg);
+  background-repeat: no-repeat;
+}
+
+#blur {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(215, 100%, 34%, 0.596);
+  position: fixed;
+  z-index: 0;
+  display: none;
+  transition: 5s;
+}
+
+.wrap2 {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+#GR {
+  grid-column: 2/3;
+  grid-row: 1/1;
+  color: #f9b233;
+  font-family: "Druk Wide";
+  text-transform: uppercase;
+  font-size: 80px;
+  letter-spacing: 20px;
+  place-self: end;
+}
+
+#OB {
+  grid-column: 1/2;
+  grid-row: 2/2;
+  color: #f9b233;
+  font-family: "Druk Wide";
+  text-transform: uppercase;
+  font-size: 85px;
+  letter-spacing: 20px;
+  justify-self: start;
+  /* margin-bottom: 1rem; */
+}
+
+#GROB {
+  display: none;
+}
+
+#grobteater {
+  display: none;
+}
+
+#pink {
+  display: none;
+}
+
+#blaa {
+  display: none;
+}
+
+#teater {
+  grid-column: 1/3;
+  grid-row: 3/3;
+  color: #e637a7;
+  font-family: "Druk Bold";
+  text-transform: uppercase;
+  font-size: 80px;
+  letter-spacing: 20px;
+  place-self: start center;
+}
+
+#dtf {
+  grid-column: 1/2;
+  grid-row: 3 / span 4;
+  color: #e637a7;
+  font-family: "Druk Bold";
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  place-self: center;
+  writing-mode: sideways-lr;
+  place-self: start start;
+  margin-top: 0.8rem;
+  text-decoration: underline;
+  text-decoration-color: #f9b233;
+  margin-bottom: 2rem;
+}
+
+#billet {
+  grid-column: 2/2;
+  grid-row: 4/4;
+
+  place-self: center;
+  margin-top: 1.5rem;
+}
+
+#billet button {
+  background-image: url(assets/købbilletknap.svg);
+
+  padding: 10px;
+  aspect-ratio: 161.674/73;
+  background-color: transparent;
+  background-size: cover;
+  border-style: none;
+  height: 40px;
+  width: auto;
+}
+
+#billet button:hover {
+  background-image: url(assets/købbilletknaphover.svg);
+  padding: 10px;
+  aspect-ratio: 162.011/73;
+  background-color: transparent;
+  background-size: cover;
+  border-style: none;
+  height: 40px;
+  width: auto;
+}
+#billet p {
+  color: #f9b233;
+  font-family: "Druk Text";
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+#billet h2 {
+  color: #f9b233;
+  font-family: "Druk Bold";
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-decoration-color: #e637a7;
+}
+
+/* #billet button {
+  border-color: #f9b233;
+  background-color: transparent;
+  color: #f9b233;
+  margin-top: 0.5rem;
+  font-family: "Druk Wide";
+  font-size: 0.5rem;
+  border-radius: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+} */
+
+/* kampagne beskrivelse */
+
+#kampagne {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+}
+
+h3 {
+  color: #0048ae;
+  font-family: "Druk Bold";
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  color: #e637a7;
+
+  font-weight: 500;
+  font-family: "Druk Text";
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
+#kampagne p {
+  color: #f9b233;
+  font-family: "paralucent", sans-serif;
+  font-size: 0.9rem;
+  margin-right: 2.5rem;
+  font-weight: 500;
+  max-width: 60ch;
+  line-height: 1.5rem;
+}
+
+#kampagne button {
+  border-color: #e637a7;
+  background-color: #e637a7;
+  color: #000000;
+  margin-top: 1rem;
+  font-family: "Druk Wide";
+  font-size: 0.5rem;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-style: solid;
+}
+#kampagne a {
+  color: black;
+}
+
+#kampagne button:hover {
+  border-color: #f9b233;
+  background-color: #f9b233;
+}
+
+/* hjul */
+
+#spin {
+  margin-left: 1rem;
+}
+
+#hjul {
+  max-width: 700px;
+  grid-area: 1/1;
+  margin-bottom: 2rem;
+}
+
+.hjul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#pil {
+  width: 30px;
+  grid-area: 1/1;
+  justify-self: center;
+  z-index: 0;
+}
+
+.drej {
+  animation-name: drej_kf;
+  animation-duration: 5s;
+  animation-timing-function: initial;
+}
+
+@keyframes drej_kf {
+  0% {
+    -moz-transform: rotate(320deg);
+    -webkit-transform: rotate(320deg);
+    -o-transform: rotate(320deg);
+    -ms-transform: rotate(320deg);
+  }
+  100% {
+    -moz-transform: rotate(680deg);
+    -webkit-transform: rotate(680deg);
+    -o-transform: rotate(680deg);
+    -ms-transform: rotate(680deg);
+  }
+}
+
+/* header/nav menu 600 */
+
+/* #mySidepanel {
+    display: none;
+  }
+
+  .openbtn {
+    display: none;
+  } */
+
+#nav_desktop {
+  display: flex;
+  place-content: center;
+  gap: 40px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-bottom: 5px;
+  gap: 40px;
+  overflow-x: auto;
+  flex-flow: wrap;
+}
+
+.grid_menu {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+#nav_desktop a {
+  color: #000000;
+  font-family: "Vujahday Script", cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  gap: 20px;
+}
+
+header {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
+}
+
+#nav_desktop a:hover {
+  color: #000000;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Druk Bold";
+  src: url(fonte/Druk\ Bold\ Regular.woff2);
+}
+
+@font-face {
+  font-family: "Druk Text";
+  src: url(fonte/Druk\ Text\ Wide\ Bold\ Italic.woff2);
+}
+
+@font-face {
+  font-family: "Druk Wide";
+  src: url(fonte/Druk\ Wide\ Bold.woff2);
+}
+
+@media (min-width: 700px) {
+  #first_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    padding-bottom: 6rem;
+  }
+
+  #GR {
+    display: none;
+  }
+
+  #OB {
+    display: none;
+  }
+  #GROB {
+    display: block;
+    grid-column: 2 / span 3;
+    grid-row: 1/1;
+    color: #f9b233;
+    font-family: "Druk Wide";
+    text-transform: uppercase;
+    font-size: 85px;
+    letter-spacing: 20px;
+    justify-self: start;
+  }
+  #dtf {
+    grid-column: 1/2;
+    grid-row: 1 / span 4;
+    color: #e637a7;
+    font-family: "Druk Bold";
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    place-self: center;
+    writing-mode: sideways-lr;
+    place-self: start start;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #f9b233;
+    margin-bottom: 2rem;
+  }
+  #billet {
+    grid-column: 3/3;
+    grid-row: 4/4;
+    place-self: center;
+    margin-top: 1.5rem;
+  }
+
+  #teater {
+    grid-column: 2 / span 4;
+    grid-row: 2/3;
+    color: #e637a7;
+    font-family: "Druk Bold";
+    text-transform: uppercase;
+    font-size: 80px;
+    letter-spacing: 20px;
+    place-self: end end;
+  }
+  /* hjul */
+
+  .hjul {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  #hjul {
+    grid-column: 2/2;
+  }
+
+  #pil {
+    width: 30px;
+    grid-column: 2/2;
+    justify-self: center;
+    z-index: 0;
+  }
+
+  /* tekst */
+
+  h3 {
+    font-size: 3.5rem;
+  }
+  #kampagne p {
+    font-size: 1.2rem;
+  }
+
+  #kampagne button {
+    color: black;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .wrap {
+    background-image: url(assets/pink.svg);
+    background-repeat: no-repeat;
+    height: 800px;
+  }
+
+  .wrap2 {
+    background-image: url(assets/blaa.svg);
+    background-repeat: no-repeat;
+    height: 800px;
+  }
+
+  #first_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    padding-bottom: 6rem;
+  }
+
+  #grobteater {
+    display: block;
+    grid-column: 1 / span 4;
+    grid-row: 1/1;
+    color: #f9b233;
+    font-family: "Druk Wide";
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    place-self: start end;
+    margin-right: 2rem;
+  }
+
+  #teater {
+    display: none;
+  }
+
+  #GROB {
+    display: none;
+  }
+
+  #billet {
+    grid-column: 3/3;
+    grid-row: 3/3;
+    place-self: center;
+    margin-top: 1.5rem;
+  }
+
+  #billet p {
+    color: #f9b233;
+    font-family: "Druk Text";
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  #billet h2 {
+    color: #f9b233;
+    font-family: "Druk Bold";
+    text-transform: uppercase;
+    font-size: 4.2rem;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-color: #e637a7;
+  }
+
+  #dtf {
+    grid-column: 1/2;
+    grid-row: 1 / span 4;
+    color: #e637a7;
+    font-family: "Druk Bold";
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    place-self: center;
+    writing-mode: sideways-lr;
+    place-self: start start;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #f9b233;
+    margin-bottom: 2rem;
+  }
+
+  /* hjul */
+
+  .hjul {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  #hjul {
+    grid-column: 2/2;
+  }
+
+  #pil {
+    width: 30px;
+    grid-column: 2/2;
+    justify-self: center;
+    z-index: 0;
+  }
+
+  /* tekst */
+
+  h3 {
+    font-size: 3.5rem;
+  }
+  #kampagne p {
+    font-size: 1.2rem;
+  }
+
+  #kampagne button {
+    color: black;
+    font-size: 0.8rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  #spin {
+    margin-top: 3rem;
+    border-left: 2px #e637a7 solid;
+    padding-left: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  #grobteater {
+    display: block;
+    font-size: 5rem;
+  }
+
+  #spin {
+    padding-left: 4rem;
+  }
+}
+
+/* ------- FOOTER ------- */
+footer {
+  background-color: #f9b233;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+#submit {
+  background-color: #e637a7;
+  border: solid 2px black;
+  padding: 0 1rem 0 1rem;
+  margin-left: -6px;
+  font-family: "Druk Bold";
+  height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+#submit:hover {
+  filter: grayscale(20%);
+  cursor: pointer;
+}
+#email {
+  border: solid 2px black;
+  background-color: transparent;
+  font-family: "Druk Bold";
+  height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+label {
+  font-family: "Druk Bold";
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+address {
+  font-family: "Druk Bold";
+  font-style: normal;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+footer img {
+  aspect-ratio: 1/1;
+  width: 40px;
+}
+
+@media (min-width: 850px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}

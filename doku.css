@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Druk Bold";
+  src: url(fonte/Druk\ Bold\ Regular.woff2);
+}
+
+@font-face {
+  font-family: "Druk Text";
+  src: url(fonte/Druk\ Text\ Wide\ Bold\ Italic.woff2);
+}
+
+@font-face {
+  font-family: "Druk Wide";
+  src: url(fonte/Druk\ Wide\ Bold.woff2);
+}
+
+/* overskrifter */
+
+h1 {
+  font-family: "Druk Wide";
+  color: #e637a7;
+  text-decoration: underline;
+  margin-top: 1rem;
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-family: "Druk Wide";
+  color: #f9b233;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+h3 {
+  color: #0048ae;
+  font-family: "Druk Bold";
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* logo */
+
+nav div {
+  padding-top: 1rem;
+  grid-column: 2/2;
+  text-align: center;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#videoer div {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#videoer {
+  display: flex;
+  gap: 3rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 1155px) {
+  #videoer {
+    display: block;
+  }
+  main {
+    margin: 15px;
+  }
+}
+
+#insta {
+  display: flex;
+  gap: 20px;
+}
+
+#insta img {
+  width: clamp(10rem, 50%, 40rem);
+}
+
+#feed {
+  display: flex;
+  gap: 20px;
+}
+#feed img {
+  width: clamp(5rem, 50%, 40rem);
+}
+
+section {
+  padding-block: clamp(1rem, 4%, 3rem);
+}
+
+#facebook {
+  display: flex;
+  width: clamp(5rem, 50%, 40rem);
+  gap: 20px;
+}
+/* ------- FOOTER ------- */
+footer {
+  background-color: #f9b233;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+#submit {
+  background-color: #e637a7;
+  border: solid 2px black;
+  padding: 0 1rem 0 1rem;
+  margin-left: -6px;
+  font-family: "Druk Bold";
+  height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+#submit:hover {
+  filter: grayscale(20%);
+  cursor: pointer;
+}
+#email {
+  border: solid 2px black;
+  background-color: transparent;
+  font-family: "Druk Bold";
+  height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+label {
+  font-family: "Druk Bold";
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+address {
+  font-family: "Druk Bold";
+  font-style: normal;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+footer img {
+  aspect-ratio: 1/1;
+  width: 40px;
+}
+
+@media (min-width: 850px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
